@@ -1,0 +1,17 @@
+name: Tag plugin
+
+on:
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Create tag
+        id: build
+        run: |
+          VERSION=$(jq -r '.version' package.json)
+          git tag "v$VERSION"
+          git push origin "v$VERSION"
