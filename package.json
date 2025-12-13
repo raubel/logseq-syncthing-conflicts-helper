@@ -1,7 +1,9 @@
 {
-  "name": "syncthing-conflicts-helper",
-  "version": "1.0.0",
+  "name": "logseq-syncthing-conflicts-helper",
+  "title": "Syncthing Conflicts Helper",
+  "version": "0.0.1",
   "main": "dist/index.js",
+  "icon": "icons/icon.png",
   "scripts": {
     "build": "esbuild src/index.ts --bundle --outfile=dist/index.js --format=iife --global-name=plugin",
     "watch": "npm run build -- --watch"
@@ -15,6 +17,6 @@
     "diff": "^8.0.2"
   },
   "logseq": {
-    "id": "_0eftsxt4d"
+    "id": "logseq-syncthing-conflicts-helper"
   }
 }
