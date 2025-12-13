@@ -1,6 +1,8 @@
 {
   "name": "logseq-syncthing-conflicts-helper",
   "title": "Syncthing Conflicts Helper",
+  "description": "A Logseq plugin to help resolving Syncthing conflicts.",
+  "author": "Rémi Aubel",
   "version": "0.0.1",
   "main": "dist/index.js",
   "icon": "icons/icon.png",
@@ -17,6 +19,7 @@
     "diff": "^8.0.2"
   },
   "logseq": {
-    "id": "logseq-syncthing-conflicts-helper"
+    "id": "logseq-syncthing-conflicts-helper",
+    "icon": "./icons/icon.png"
   }
 }
