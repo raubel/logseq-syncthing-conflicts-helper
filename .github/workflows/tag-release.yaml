@@ -16,7 +16,8 @@ jobs:
         id: build
         run: |
           VERSION=$(jq -r '.version' package.json)
-          git tag "v$VERSION" || exit 0
+          [ -s "$(git -l tag "v$VERSION")" ] && exit 0
+          git tag "v$VERSION"
           git push origin "v$VERSION"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
